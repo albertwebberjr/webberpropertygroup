@@ -3,479 +3,280 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Webber Property Group | Property Management & Preservation</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Webber Property Group | Property Preservation & Management</title>
     <style>
-        /* --- CSS Reset & Variables --- */
+        :root {
+            --primary-color: #1b3b36;
+            --secondary-color: #c5a880;
+            --dark-color: #2c3e50;
+            --light-color: #f9f9f9;
+            --white: #ffffff;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        :root {
-            --primary: #0F172A;
-            --accent: #C49A45;
-            --accent-hover: #A37E33;
-            --bg-light: #F8FAFC;
-            --card-bg: #FFFFFF;
-            --text-main: #334155;
-            --text-dark: #0F172A;
-            --text-muted: #64748B;
-            --border: #E2E8F0;
-        }
-
-        html {
-            scroll-behavior: smooth;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Open Sans', sans-serif;
-            color: var(--text-main);
-            background-color: var(--bg-light);
+            color: var(--dark-color);
+            background-color: var(--white);
             line-height: 1.6;
         }
 
-        h1, h2, h3, h4, .logo {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        /* --- Navigation --- */
-        nav {
-            background-color: var(--primary);
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1.5rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        .logo {
-            font-size: 1.3rem;
-            font-weight: 800;
-            color: #FFFFFF;
+        header h1 {
+            font-size: 1.5rem;
             letter-spacing: 1px;
         }
 
-        .logo span {
-            color: var(--accent);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: #E2E8F0;
+        nav a {
+            color: var(--white);
             text-decoration: none;
+            margin-left: 20px;
             font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
 
-        .nav-links a:hover {
-            color: var(--accent);
+        nav a:hover {
+            color: var(--secondary-color);
         }
 
-        /* --- Hero Section --- */
         .hero {
-            position: relative;
-            min-height: 80vh;
-            background: linear-gradient(135deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.8)), 
-                        url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(rgba(27, 59, 54, 0.85), rgba(27, 59, 54, 0.85)), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: var(--white);
             text-align: center;
-            color: #FFFFFF;
-            padding: 8rem 2rem 4rem;
+            padding: 100px 20px;
         }
 
-        .hero-content {
-            max-width: 850px;
-        }
-
-        .hero-tag {
-            display: inline-block;
-            background: rgba(196, 154, 69, 0.2);
-            color: var(--accent);
-            border: 1px solid var(--accent);
-            padding: 0.4rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero h1 {
-            font-size: 3.2rem;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 1.2rem;
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
         }
 
         .hero p {
             font-size: 1.2rem;
-            color: #94A3B8;
-            margin-bottom: 2.5rem;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
+            max-width: 600px;
+            margin: 0 auto 30px;
         }
 
         .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: var(--primary);
-            padding: 0.9rem 2.2rem;
-            font-weight: 700;
-            font-size: 1rem;
-            border-radius: 6px;
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            padding: 12px 30px;
+            border-radius: 5px;
             text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 14px rgba(196, 154, 69, 0.4);
+            font-weight: bold;
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
         }
 
         .btn:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-2px);
+            background-color: #b3956e;
         }
 
-        /* --- Section Header --- */
+        section {
+            padding: 80px 10%;
+        }
+
         .section-header {
             text-align: center;
-            max-width: 600px;
-            margin: 0 auto 3.5rem;
+            margin-bottom: 50px;
         }
 
         .section-header h2 {
-            font-size: 2.2rem;
-            color: var(--text-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .section-header p {
-            color: var(--text-muted);
-            font-size: 1rem;
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
         }
 
         .divider {
             width: 60px;
             height: 4px;
-            background-color: var(--accent);
-            margin: 0.8rem auto 0;
-            border-radius: 2px;
-        }
-
-        /* --- Services Section --- */
-        .services {
-            padding: 6rem 2rem;
-            max-width: 1200px;
+            background-color: var(--secondary-color);
             margin: 0 auto;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .service-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border);
-            border-radius: 10px;
-            padding: 2.5rem 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-            border-color: var(--accent);
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: var(--accent);
+            background: var(--light-color);
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 4px solid var(--primary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         .service-card h3 {
-            font-size: 1.35rem;
-            color: var(--text-dark);
-            margin-bottom: 1.2rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
         }
 
         .service-card ul {
-            list-style: none;
+            list-style-type: none;
         }
 
         .service-card li {
+            margin-bottom: 10px;
             position: relative;
-            padding-left: 1.5rem;
-            margin-bottom: 0.8rem;
-            color: var(--text-main);
-            font-size: 0.95rem;
+            padding-left: 20px;
         }
 
         .service-card li::before {
-            content: "✓";
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
             position: absolute;
             left: 0;
-            color: var(--accent);
-            font-weight: bold;
         }
 
-        /* --- About Section --- */
         .about {
-            background-color: #FFFFFF;
-            padding: 6rem 2rem;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+            background-color: var(--light-color);
         }
 
         .about-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            display: flex;
             align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
         }
 
-        .about-text h2 {
-            font-size: 2.2rem;
-            color: var(--text-dark);
-            margin-bottom: 1.2rem;
+        .about-text {
+            flex: 1;
+            min-width: 300px;
         }
 
         .about-text p {
-            color: var(--text-main);
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
+            margin-bottom: 20px;
         }
 
         .stat-box {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-top: 2rem;
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
         }
 
         .stat {
-            background-color: var(--bg-light);
-            padding: 1.2rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--accent);
+            background: var(--white);
+            padding: 20px;
+            border-radius: 5px;
+            border-left: 4px solid var(--secondary-color);
+            flex: 1;
         }
 
         .stat strong {
             display: block;
+            color: var(--primary-color);
             font-size: 1.1rem;
-            color: var(--text-dark);
         }
 
-        .stat span {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .about-image {
-            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4)), 
-                        url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=800&q=80') center/cover;
-            height: 100%;
-            min-height: 380px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        /* --- Contact Section --- */
         .contact {
-            padding: 6rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
+            background-color: var(--white);
         }
 
         .contact-card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            padding: 3.5rem 2.5rem;
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--light-color);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
         .form-group {
-            margin-bottom: 1.2rem;
+            margin-bottom: 20px;
         }
 
         .form-group label {
             display: block;
-            font-size: 0.9rem;
+            margin-bottom: 8px;
             font-weight: 600;
-            color: var(--text-dark);
-            margin-bottom: 0.4rem;
+            color: var(--primary-color);
         }
 
-        .form-group input, 
+        .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 0.85rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            font-size: 0.95rem;
-            outline: none;
-            transition: border-color 0.3s ease;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
         }
 
-        .form-group input:focus, 
+        .form-group input:focus,
         .form-group textarea:focus {
-            border-color: var(--accent);
+            outline: none;
+            border-color: var(--primary-color);
         }
 
         .submit-btn {
             width: 100%;
-            border: none;
-            cursor: pointer;
-            margin-top: 0.5rem;
-        }
-
-        /* --- Privacy Policy Section --- */
-        .privacy-section {
-            background-color: #FFFFFF;
-            padding: 5rem 2rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .privacy-container {
-            max-width: 900px;
-            margin: 0 auto;
-            font-size: 0.95rem;
-            color: var(--text-main);
-        }
-
-        .privacy-container h2 {
-            font-size: 1.8rem;
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-        }
-
-        .privacy-container h3 {
             font-size: 1.1rem;
-            color: var(--text-dark);
-            margin-top: 1.5rem;
-            margin-bottom: 0.5rem;
         }
 
-        .privacy-container p {
-            margin-bottom: 1rem;
-            line-height: 1.7;
-        }
-
-        /* --- Footer --- */
         footer {
-            background-color: var(--primary);
-            color: #64748B;
+            background-color: var(--primary-color);
+            color: var(--white);
             text-align: center;
-            padding: 2rem;
-            font-size: 0.9rem;
-            border-top: 1px solid #1E293B;
+            padding: 30px 20px;
         }
 
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- Responsive Styles --- */
-        @media (max-width: 900px) {
-            .about-container {
-                grid-template-columns: 1fr;
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
             }
-
-            .about-image {
-                min-height: 250px;
-            }
-
-            .hero h1 {
-                font-size: 2.3rem;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .nav-container {
+            header {
                 flex-direction: column;
-                gap: 1rem;
-            }
-
-            .hero {
-                padding-top: 9rem;
-            }
-
-            .contact-card {
-                padding: 2rem 1.5rem;
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <nav>
-        <div class="nav-container">
-            <div class="logo">WEBBER <span>PROPERTY GROUP</span></div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <!-- Header / Navigation -->
+    <header>
+        <h1>Webber Property Group</h1>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <span class="hero-tag">Rutherford County, Tennessee Property Services</span>
-            <h1>Property Preservation & Management</h1>
-            <p>Providing dependable property preservation, site maintenance, and residential oversight tailored to protect and restore your physical real estate assets.</p>
-            <a href="#contact" class="btn">Get a Free Quote</a>
-        </div>
+    <section class="hero">
+        <h2>Professional Property Preservation & Field Management</h2>
+        <p>Reliable trash-outs, security, grounds maintenance, and asset protection across Rutherford County, Tennessee.</p>
+        <a href="#contact" class="btn">Get a Quote</a>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="services">
+    <section id="services">
         <div class="section-header">
             <h2>Our Core Services</h2>
-            <p>Comprehensive property care, field operations, and management.</p>
+            <p>Comprehensive field preservation and property care solutions for investors, real estate companies, and banks.</p>
             <div class="divider"></div>
         </div>
-
         <div class="services-grid">
             <div class="service-card">
                 <h3>Property Preservation</h3>
@@ -486,7 +287,6 @@
                     <li>Hazard & Debris Clearing</li>
                 </ul>
             </div>
-
             <div class="service-card">
                 <h3>Field & Grounds Maintenance</h3>
                 <ul>
@@ -496,7 +296,6 @@
                     <li>Occupancy & Safety Inspections</li>
                 </ul>
             </div>
-
             <div class="service-card">
                 <h3>Property Management</h3>
                 <ul>
@@ -516,19 +315,17 @@
                 <h2>Protecting Your Assets Every Step of the Way</h2>
                 <p><strong>Webber Property Group</strong> provides complete property preservation and field management solutions in Christiana and throughout Rutherford County, Tennessee.</p>
                 <p>Whether preparing a home for market, managing routine residential care, or performing urgent field preservation services, we deliver quick turnarounds, thorough documentation, and quality workmanship.</p>
-                
                 <div class="stat-box">
                     <div class="stat">
                         <strong>Local Service</strong>
                         <span>Rutherford County, TN</span>
                     </div>
                     <div class="stat">
-                        <strong>Full Coverage</strong>
-                        <span>Preservation & Management</span>
+                        <span>Full Coverage</span>
+                        <strong>Preservation & Management</strong>
                     </div>
                 </div>
             </div>
-            <div class="about-image"></div>
         </div>
     </section>
 
@@ -539,60 +336,38 @@
             <p>Send us a message below and we will follow up with you promptly.</p>
             <div class="divider"></div>
         </div>
-
         <div class="contact-card">
-            <form action="https://formsubmit.co/webberpropertygroup@gmail.com" method="POST">
-    <div class="form-group">
-        <label>Your Name</label>
-        <input type="text" name="name" placeholder="John Doe" required>
-    </div>
-    <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" name="email" placeholder="john@example.com" required>
-    </div>
-    <div class="form-group">
-        <label>Phone Number</label>
-        <input type="tel" name="phone" placeholder="(615) 000-0000">
-    </div>
-    <div class="form-group">
-        <label>How Can We Help?</label>
-        <textarea name="message" rows="4" placeholder="Describe your property preservation or management needs..." required></textarea>
-    </div>
+            <!-- FormSubmit Token Action Integration -->
+            <form action="https://formsubmit.co/f2ad76b8e3f77da21fbf77426bcddc83" method="POST">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" name="phone" placeholder="(615) 000-0000">
+                </div>
+                <div class="form-group">
+                    <label>How Can We Help?</label>
+                    <textarea name="message" rows="4" placeholder="Describe your property preservation or management needs..." required></textarea>
+                </div>
 
-    <!-- Optional settings -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="New Property Preservation Lead!">
+                <!-- FormSubmit Settings -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_subject" value="New Property Preservation Lead!">
 
-    <button type="submit" class="btn submit-btn">Send Message</button>
-</form>
-        </div>
-    </section>
-
-    <!-- Privacy Policy Section -->
-    <section id="privacy" class="privacy-section">
-        <div class="privacy-container">
-            <h2>Privacy Policy</h2>
-            <p><em>Last updated: 2026</em></p>
-            
-            <p>Webber Property Group ("we," "our," or "us") respects your privacy. This Privacy Policy explains how we collect, use, and protect the information you provide through our website contact form.</p>
-
-            <h3>Information We Collect</h3>
-            <p>When you fill out our contact form, we collect personal information that you voluntarily submit, including your name, email address, phone number, and any project details included in your message.</p>
-
-            <h3>How We Use Your Information</h3>
-            <p>We use the information collected solely to respond to your inquiries, provide service quotes, and communicate with you regarding requested property preservation or management services.</p>
-
-            <h3>Data Protection & Sharing</h3>
-            <p>We do not sell, rent, or trade your personal information to third parties. Your data is strictly used for internal communication and service delivery.</p>
-
-            <h3>Contact Us</h3>
-            <p>If you have any questions regarding this Privacy Policy or your data, please contact Webber Property Group through our website form.</p>
+                <button type="submit" class="btn submit-btn">Send Message</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Webber Property Group. All rights reserved. | <a href="#privacy">Privacy Policy</a></p>
+        <p>&copy; 2026 Webber Property Group. All rights reserved. | Christiana, Tennessee</p>
     </footer>
 
 </body>
