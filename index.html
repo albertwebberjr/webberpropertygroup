@@ -541,29 +541,30 @@
         </div>
 
         <div class="contact-card">
-            <form action="#" method="post" onsubmit="event.preventDefault(); alert('Thank you! Your message has been received.');">
-                <div class="form-group">
-                    <label>Your Name</label>
-                    <input type="text" placeholder="John Doe" required>
-                </div>
+            <form action="https://formsubmit.co/webberpropertygroup@gmail.com" method="POST">
+    <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="John Doe" required>
+    </div>
+    <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" name="email" placeholder="john@example.com" required>
+    </div>
+    <div class="form-group">
+        <label>Phone Number</label>
+        <input type="tel" name="phone" placeholder="(615) 000-0000">
+    </div>
+    <div class="form-group">
+        <label>How Can We Help?</label>
+        <textarea name="message" rows="4" placeholder="Describe your property preservation or management needs..." required></textarea>
+    </div>
 
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" placeholder="john@example.com" required>
-                </div>
+    <!-- Optional settings -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Property Preservation Lead!">
 
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" placeholder="(615) 000-0000">
-                </div>
-
-                <div class="form-group">
-                    <label>How Can We Help?</label>
-                    <textarea rows="4" placeholder="Describe your property preservation or management needs..." required></textarea>
-                </div>
-
-                <button type="submit" class="btn submit-btn">Send Message</button>
-            </form>
+    <button type="submit" class="btn submit-btn">Send Message</button>
+</form>
         </div>
     </section>
 
